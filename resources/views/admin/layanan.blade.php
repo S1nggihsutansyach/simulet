@@ -49,7 +49,6 @@
                     <th scope="col">No</th>
                     <th scope="col">Gambar</th>
                     <th scope="col">Nama Layanan</th>
-                    {{-- <th scope="col">Stok</th> --}}
                     <th scope="col">Kategori</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Aksi</th>
@@ -65,13 +64,6 @@
                         </a>
                     </td>
                     <td>{{ $data->name }}</td>
-                    {{-- <td>
-                        @if ($data->quantity == 0)
-                            <span class="badge badge-danger">Habis</span>
-                        @else
-                            {{ $data->quantity }}
-                        @endif
-                    </td> --}}
                     <td>{{ $data->category_id }}</td>
                     <td>Rp. {{ number_format($data->price,0,",",".") }}</td>
                     <td>

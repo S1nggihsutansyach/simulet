@@ -64,7 +64,7 @@
                                 <td colspan="5" class="text-right"> <strong>Bukti Bayar</strong> </td>
                                 <td>
                                     <img class="fit-image" width="50px" src="{{ asset('bukti_transfer/' .$order->bukti_bayar) }}">
-                                    
+
                                 </td>
                             </tr>
                             <tr>

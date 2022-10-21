@@ -9,7 +9,8 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between">
         <h4 class="card-title">Laporan Pemesanan</h4>
-        <button class="btn btn-success btn-sm btn-export" target="_blank"> <i class="fas fa-print"></i> </button>
+        <button class="btn btn-success" onclick="window.print()" value="Print PDF"> 
+            <i class="fas fa-print"></i> </button>
     </div>
     <div class="card-body">
         <form action="" id="form-bulan" method="get">
@@ -21,7 +22,7 @@
             </div>
         </form>
         <div class="table-responsive">
-            <table  class="table">
+            <table  class="table" id="laporan">
                 <thead>
                     <tr>
                         <th >No</th>
@@ -52,6 +53,9 @@
 </div>
 @endsection
 @section('script')
+<script>
+    window.onclick = window.print;
+</script>
 <script type="text/javascript">
     $('.select-bulan').on('change', function() {
         $('.is-export').attr('disabled', true)
@@ -70,5 +74,16 @@
             ]
         });
     });
+    
+    let print = (doc) =>{
+        let objFra = document.createElement('iframe');
+        objFra.style.visibility = 'hidden';
+        objFra.src = doc;
+
+        document.body.appendChild(objFra);
+
+        objFra.contentWindow.focus();
+        objFra.contentWindow.print();
+    }
 </script>
 @endsection

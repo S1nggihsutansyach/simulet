@@ -46,7 +46,7 @@ Route::group(['middleware' => ['auth','role:admin']], function () {
     Route::get('/dashboard/layanan/tambah','LayananController@tambahForm')->name('tampiltambahlayanan.admin');
     Route::post('/dashboard/layanan/tambah','LayananController@tambahLayanan')->name('tambahlayanan.admin');
     Route::get('/dashboard/layanan/ubah/{slug}','LayananController@editForm')->name('tampilubahlayanan.admin');
-    Route::post('/dashboard/layanan/ubah/{slug}','LayananController@updatelayanan')->name('updatelayanan.admin');
+    Route::post('/dashboard/layanan/ubah/{slug}','LayananController@updateLayanan')->name('updatelayanan.admin');
     Route::delete('/dashboard/layanan/hapus/{slug}','LayananController@hapusLayanan')->name('hapuslayanan.admin');
     Route::get('/dashboard/layanan/detail/{slug}','LayananController@detailLayanan')->name('detaillayanan.admin');
 
@@ -60,13 +60,17 @@ Route::group(['middleware' => ['auth','role:admin']], function () {
     Route::get('/dashboard/pemesanan','OrderController@index')->name('pemesanan.admin');
     Route::get('/dashboard/pemesanan/{slug}','OrderController@detail')->name('pemesananDetail.admin');
     Route::get('/dashboard/pemesanan/terima/{slug}','OrderController@terima')->name('pemesanan.terima');
-
     Route::get('/dashboard/report', 'reportController@index')->name('pemesanan.report');
 
 
     Route::get('/dashboard/reservasi','ReservasiController@index')->name('tampilreservasi.admin');
-    Route::post('/dashboard/reservasi/tambah','ReservasiController@tambahReservasi')->name('tambahreservasi.admin');
     Route::get('/dashboard/reservasi/tambah','ReservasiController@tambahForm')->name('tampiltambahreservasi.admin');
+    Route::post('/dashboard/reservasi/tambah','ReservasiController@tambahReservasi')->name('tambahreservasi.admin');
+    Route::get('/dashboard/reservasi/ubah/{id}','ReservasiController@editForm')->name('tampilubahreservasi.admin');
+    Route::post('/dashboard/reservasi/ubah/{id}','ReservasiController@updateReservasi')->name('updatereservasi.admin');
+    Route::get('/dashboard/reservasi/detail/{id}','ReservasiController@detailReservasi')->name('detailreservasi.admin');
+    Route::get('/dashboard/reservasi/hapus/{id}','ReservasiController@hapusReservasi')->name('hapusreservasi.admin');
+    Route::get('/dashboard/reservasi/report','ReservasiController@reportReservasi')->name('reportreservasi.admin');
 
 });
 

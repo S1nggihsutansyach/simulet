@@ -16,7 +16,7 @@
                     <h4>Pemesanan Sukses</h4>
                     <h6>Pemesanan anda sukses selanjutnya untuk melakukan pembayaran melalui transfer
                         <br>
-                        di rekening <strong>Bank BRI Nomer Rekening : 31212-7533545-200</strong>
+                        di rekening <strong>Bank BRI Nomer Rekening : 31212-7533545-200 Atas Nama : Iwan</strong>
                         dengan nominal <strong>Rp. {{ number_format($order->total_price + $order->code,0,",",".") }}</strong>
                     </h6>
                 </div>

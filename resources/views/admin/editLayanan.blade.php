@@ -28,15 +28,16 @@
                     <input type="text" name="name" class="form-control" id="" aria-describedby="" value="{{ $layanan->name }}"
                         placeholder="Nama Layanan">
                 </div>
-                {{-- <div class="form-group">
-                    <label for="exampleFormControlSelect1">Kategori</label>
-                    <select class="form-control" name="category_id" id="">
-                        <option value="{{ $layanan->category_id }}" selected>{{ $layanan->category['name'] }}</option>
-                        @foreach ($kategori as $kategori)
-                        <option value="{{ $kategori->id }}">{{ $kategori->name }}</option>
-                        @endforeach
-                    </select>
-                </div> --}}
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Kategori Layanan</label>
+                        <select class="form-control" name="category_id" id="">
+                          <option selected>Pilih Kategori Layanan</option>
+                            @foreach ($katlayanan as $katlayanan)
+                            <option value="{{ $katlayanan->id }}">{{ $katlayanan->name }}</option>
+                            @endforeach
+                        </select>
+                      </div>
+
                 <div class="form-group">
                     <label for="exampleInputEmail1">Harga</label>
                     <input type="text" name="price" class="form-control" id="rupiah2" aria-describedby=""

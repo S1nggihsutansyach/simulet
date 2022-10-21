@@ -53,7 +53,7 @@
                                         </p>
                                         {{-- <p class="card-text">{{ $data->category_id }}</p> --}}
                                         {{-- <p class="card-text">{{ $data->created_at->diffForHumans() }}</p> --}}
-                                        <a href="https://wa.me/send?phone=6282127476721&text=Saya%20Mau%20Reservasi{{$data->name}}" class="btn btn-success w-100 mt-2" target="_blank">
+                                        <a href="https://wa.me/send?phone=6282127476721&text=Saya%20Mau%20Reservasi%20{{$data->name}}" class="btn btn-success w-100 mt-2" target="_blank">
                                            <i class="fab fa-whatsapp"></i> Reservasi Sekarang</a>
                                     </div>
                                 </div>

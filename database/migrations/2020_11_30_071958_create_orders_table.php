@@ -22,6 +22,7 @@ class CreateOrdersTable extends Migration
             $table->integer('code');
             $table->integer('total_price');
             $table->timestamps();
+            $table->string('bukti_bayar')->nullable();
         });
     }
 

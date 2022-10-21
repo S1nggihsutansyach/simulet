@@ -107,6 +107,6 @@ class OrderController extends Controller
     ]);
     
     alert()->success('Berhasil Terima', 'Sukses');
-    return redirect()->route('pemesanan.report', ['slug'=>$order->slug]);
+    return redirect()->route('pemesanan.admin', ['slug'=>$order->slug]);
     }
 }

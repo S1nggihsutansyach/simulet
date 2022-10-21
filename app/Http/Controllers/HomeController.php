@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
 
-        $produk = Product::orderBy('created_at','desc')->take(8)->get();
+        $produk = Product::all()->take(8);
         $kategori = Category::all();
 
         return view('home.index',compact('produk','kategori'));
@@ -49,7 +49,7 @@ class HomeController extends Controller
 
         $produk = Product::where('name','like',"%".$cari."%")->paginate(12);
         $kategori = Category::withCount('product')->get();
-        
+
 
         // if($cari !== $produk)
         // {

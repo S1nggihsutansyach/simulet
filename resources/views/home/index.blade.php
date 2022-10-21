@@ -18,8 +18,8 @@
     </div>
 </div>
 <div class="container">
-    <h2 class="mt-5 font-weight-bold text-center">Kategori</h2>
-    <div class="row">
+    {{-- <h2 class="mt-5 font-weight-bold text-center">Kategori</h2>
+    <div class="row text-center">
         @foreach($kategori as $kategori)
             <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-4">
                 <a href="{{ route('produkkategori.index',['slug'=>$kategori->slug]) }}">
@@ -32,9 +32,9 @@
                 </a>
             </div>
         @endforeach
-    </div>
+    </div> --}}
 
-    <h2 class="mt-5 font-weight-bold text-center">Produk Terbaru</h2>
+    <h2 class="mt-5 font-weight-bold text-center">Produk Kami</h2>
     <div class="content-produk-terbaru">
         <div class="row">
             @foreach($produk as $produk)

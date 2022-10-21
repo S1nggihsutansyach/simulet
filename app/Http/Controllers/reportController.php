@@ -21,8 +21,7 @@ class ReportController extends Controller
     {
        
             $month = isset($request->bulan) ? $request->bulan : date('Y-m');
-            $orders = Order::orderBy('order_date', 'asc')
-            -> where('order_date', 'LIKE', "%$month%")
+            $orders = Order::where('status','=','Sudah Bayar')->first()
             ->get();
                 
                 $report = array_values(Arr::sort($orders, function ($value) {
@@ -51,7 +50,7 @@ class ReportController extends Controller
             return $pdf->stream('REPORT_' . Carbon::now() . '.pdf');
         }
         
-            return view('report.index', $data);
+            return view('report.export', $data);
             
            
     }

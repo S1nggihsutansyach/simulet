@@ -78,14 +78,14 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ set_active('about.index') }}"
-                                href="{{ route('about.index') }}">Tentang Kami</a>
+                                href="{{ route('about.index') }}">Tentang</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ set_active('login') }}"
-                                    href="{{ route('login') }}">{{ __('Masuk') }}</a>
+                                    href="{{ route('login') }}">Masuk</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ set_active('home.index') }}"
+                                <a class="nav-link {{ set_active('keranjang.index') }}"
                                     href="{{ route('keranjang.index') }}">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span class="badge badge-danger">0</span>
@@ -95,7 +95,7 @@
                         <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                             <form action="{{ route('cariproduk.index') }}" method="get">
                                 <div class="input-group">
-                                    <input type="text" name="cari" class="form-control" placeholder="Cari Produk atau Layanan..." id="">
+                                    <input type="text" name="cari" class="form-control" placeholder="Cari Produk..." id="">
                                     <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
                                 </div>
                             </form>
@@ -113,10 +113,9 @@
                                     href="{{ route('layanan.index') }}">Layanan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link{{ set_active('about.index') }}"
-                                href="{{ route('about.index') }}">Tentang Kami</a>
+                                <a class="nav-link {{ set_active('about.index') }}"
+                                href="{{ route('about.index') }}">Tentang</a>
                             </li>
-
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown"
                                     class="nav-link dropdown-toggle {{ set_active('profile.index') }}"
@@ -195,11 +194,11 @@
                             <a class="navbar-brand" href="{{ route('home.index') }}">
                                 <h3 class="font-weight-bold">UlaPetshop.</h3>
                             </a>
-                            
+
                             <p><i class="fa fa-copyright"></i>Ula Petshop 2022</p>
                             <i class="fab fa-facebook fa-lg"></i>
                             <i class="fab fa-instagram fa-lg"></i>
-                            <a href="https://wa.me/send?phone=6289510170840&text=Saya%20Mau%20Reservasi%20Sekarang">  
+                            <a href="https://wa.me/send?phone=6289510170840&text=Saya%20Mau%20Reservasi%20Sekarang">
                             <i class="fab fa-whatsapp fa-lg"></i>
                         </a>
                         </div>

@@ -137,7 +137,7 @@
                             </li>
                             <li class="list-group-item">
                                 <i class="fas fa-file-invoice"></i>
-                                <a class="{{ set_active('') }}" href="">Laporan Reservasi</a>
+                                <a class="{{ set_active('report.reservasi.admin') }}" href="{{ route('reportreservasi.admin') }}">Laporan Reservasi</a>
                             </li>
                         </ul>
                     </div>

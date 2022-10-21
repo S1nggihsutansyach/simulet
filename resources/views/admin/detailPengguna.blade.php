@@ -41,12 +41,7 @@
                 </table>
 
 
-                <a name="" id="" class="btn btn-warning" href="" role="button"><i class="fa fa-pen"></i></a>
-                        <form class="d-inline" action="" method="post">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" id="" class="btn btn-danger"  role="button"><i class="fa fa-trash"></i></button>
-                        </form>
+               <a class="btn btn-primary" href="{{route('user.admin')}}">Kembali</a>
             </div>
 
 

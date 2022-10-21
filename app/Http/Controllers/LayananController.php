@@ -21,9 +21,9 @@ class LayananController extends Controller
     public function index()
     {
 
-        $layanan = Layanan::orderBy('updated_at','desc')->paginate(10);
-
-        return view('admin.layanan',compact('layanan'));
+        $layanan = Layanan::orderBy('updated_at','desc')->paginate(5);
+        $katlayanan = CategoryLayanan::all();
+        return view('admin.layanan',compact('layanan','katlayanan'));
     }
 
 
@@ -46,9 +46,10 @@ class LayananController extends Controller
     public function tambahForm()
     {
 
+        $layanan = Layanan::all();
         $katlayanan = CategoryLayanan::all();
 
-        return view('admin.tambahLayanan',compact('katlayanan'));
+        return view('admin.tambahLayanan',compact('katlayanan','layanan'));
     }
 
     public function detailLayanan($slug)
@@ -107,8 +108,8 @@ class LayananController extends Controller
     {
 
         $request->validate([
-            'name'=>'required|string',
-            'price'=>'required|string',
+            'name'=>'required',
+            'price'=>'required',
             'category_id'=>'required',
             'image'=>'',
             'desc'=>'required'

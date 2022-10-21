@@ -15,9 +15,9 @@ class CreateReservasisTable extends Migration
     {
         Schema::create('reservasis', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('nama_layanan');
-            $table->date('tanggal');
+            $table->string('nama_pelanggan');
+            $table->string('nama_resevasi');
+            $table->dateTime('tanggal');
             $table->integer('total');
             $table->timestamps();
         });

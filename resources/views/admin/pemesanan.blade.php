@@ -38,9 +38,12 @@
                         <a name="" id="" class="btn btn-primary" href="{{ route('pemesananDetail.admin',['slug'=>$data->slug]) }}" role="button">
                             <i class="fas fa-eye"></i>
                         </a>
+                        @if ($data->status == 'Belum Bayar')
                         <a class="btn btn-success" href="{{ route('pemesanan.terima',['slug'=>$data->slug]) }}" role="button">
                             <i class="fas fa-check"></i>
                         </a>
+                        @endif
+
                         
                     </td>
                 </tr>

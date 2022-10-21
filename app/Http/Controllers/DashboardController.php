@@ -28,11 +28,9 @@ class DashboardController extends Controller
         $produk = Product::get();
         $produkcount = count($produk);
 
-        $order_total = Order::where('status','checkout')->value(DB::raw("SUM(total_price + code)"));
+        $order_total = Order::where('status','Sudah Bayar')->value(DB::raw("SUM(total_price + code)"));
 
-        $order = Order::where('status','=','checkout')->orderBy('order_date','desc')->take(4)->get();
-
-
+        $order = Order::where('status','=','Belum Bayar')->orderBy('order_date','desc')->take(4)->get();
 
         return view('admin.index',compact(['usercount','produkcount','order_total','order']));
     }

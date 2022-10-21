@@ -74,6 +74,7 @@
                             @method('delete')
                             <button type="submit" id="" class="btn btn-danger"  role="button"><i class="fa fa-trash"></i></button>
                         </form>
+                        <a class="btn btn-primary" href="{{route('layanan.admin')}}">Kembali</a>
             </div>
         </div>
 
